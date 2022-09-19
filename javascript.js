@@ -15,3 +15,19 @@ function getComputerChoice() {
     }
 }
 
+function playRound(playerSelection, computerSelection) {
+    const lowCasePlayerSelection = playerSelection.toLowerCase();
+
+    if (lowCasePlayerSelection === computerSelection) {
+        return "draw";
+    } else {
+        if ((lowCasePlayerSelection === "rock" && computerSelection === "scissor") ||
+            (lowCasePlayerSelection === "paper" && computerSelection === "rock") ||
+            (lowCasePlayerSelection === "scissor" && computerSelection === "paper")
+        ) {
+            return "player won";
+        }
+        else return "player loss"
+    }
+}
+
