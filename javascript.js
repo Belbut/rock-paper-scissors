@@ -37,12 +37,12 @@ function playRound(playerSelection, computerSelection) {
             (lowCasePlayerSelection === "paper" && computerSelection === "rock") ||
             (lowCasePlayerSelection === "scissor" && computerSelection === "paper")
         ) {
-            gameResult.textContent = "Player Won";
+            gameResult.textContent = "Player Won this round";
             playerScore.textContent= parseInt(playerScore.textContent)+1;
             return "player won";
         }
         else {
-            gameResult.textContent = "Computer Won";
+            gameResult.textContent = "Computer Won this round";
             computerScore.textContent= parseInt(computerScore.textContent)+1;
             return "player loss"
         }
@@ -58,7 +58,25 @@ buttons.forEach((button) => {
         const computerWeapon = getComputerChoice();
         actionMade.textContent = `You picked ${playerWeapon} and computer used ${computerWeapon}`;
         gameResult.textContent = playRound(playerWeapon, computerWeapon);
+        endGame();
     });
 });
 
+function endGame(){
+    if(computerScore.textContent<5&&playerScore.textContent<5) return;
+
+    buttons.forEach(button => button.remove());
+    playerScore.remove();
+    computerScore.remove();
+    actionMade.remove();
+
+    //PlayAgain function
+
+    if(playerScore.textContent==5){
+        gameResult.textContent="Congratulations you Won!";            
+    }else{
+        gameResult.textContent="That's a piety you Lost!"
+    }
+
+}
 
