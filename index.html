@@ -1,12 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+
 <body>
-    <script src="javascript.js"></script>
+    <script src="javascript.js" defer></script> <!-- defer is important to be used, else the js won't work properly-->
+
+
+    <div id="results">
+        <div id="game_result"> Rock Paper Scissor</div>
+        <div id="player_score"> 0 </div>
+        <div id="computer_score"> 0 </div>
+    </div>
+    <button id="rock"> rock</button>
+    <button id="paper"> paper</button>
+    <button id="scissor"> scissor</button>
 </body>
+
 </html>
