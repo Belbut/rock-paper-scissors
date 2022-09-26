@@ -4,7 +4,8 @@ let computerScore = document.querySelector("#computer_score");
 
 const container = document.querySelector("#results");
 const actionMade = document.createElement("div");
-container.append(actionMade);
+actionMade.setAttribute("id","match_log");
+container.prepend(actionMade);
 
 
 

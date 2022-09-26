@@ -4,22 +4,38 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <meta name="Rock Paper Scissor Game" content="width=device-width, initial-scale=1.0">
+    <title>Rock Paper Scissor Game</title>
+    <script src="javascript.js" defer></script> <!-- defer is important to be used, else the js won't work properly-->
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-    <script src="javascript.js" defer></script> <!-- defer is important to be used, else the js won't work properly-->
+    <h1> Rock Paper Scissors</h1>
 
+    <div id="center_container">
+        <div id="results">
+            <h2 id="game_result"> Rock Paper Scissor</h2>
 
-    <div id="results">
-        <div id="game_result"> Rock Paper Scissor</div>
-        <div id="player_score"> 0 </div>
-        <div id="computer_score"> 0 </div>
+            <div id="score_container">
+                <div class="score_label_container">
+                    <div class="score_lable">Player Score</div>
+                    <div class="score" id="player_score"> 0 </div>
+                </div>
+                <div class="score_label_container">
+                    <div class="score_lable">Computer Score</div>
+                    <div class="score" id="computer_score"> 0 </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="buttons_container">
+            <button id="rock"> Rock</button>
+            <button id="paper"> Paper</button>
+            <button id="scissor"> Scissors</button>
+        </div>
     </div>
-    <button id="rock"> rock</button>
-    <button id="paper"> paper</button>
-    <button id="scissor"> scissor</button>
+
 </body>
 
 </html>
