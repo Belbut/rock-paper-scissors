@@ -67,17 +67,19 @@ function endGame(){
     if(computerScore.textContent<5&&playerScore.textContent<5) return;
 
     buttons.forEach(button => button.remove());
-    playerScore.remove();
-    computerScore.remove();
     actionMade.remove();
-
-    //PlayAgain function
-
     if(playerScore.textContent==5){
-        gameResult.textContent="Congratulations you Won!";            
+        gameResult.textContent="Congratulations you Won!";         
     }else{
         gameResult.textContent="That's a piety you Lost!"
     }
+
+    const playAgain= document.createElement("button");
+    playAgain.setAttribute("id","play_again_button");
+    playAgain.textContent="Play Again";
+    buttons_container.append(playAgain);
+    playAgain.addEventListener("click", ()=> window.location.reload());
+    
 
 }
 
