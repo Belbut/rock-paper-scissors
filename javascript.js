@@ -73,13 +73,18 @@ function endGame(){
     }else{
         gameResult.textContent="That's a piety you Lost!"
     }
+    
+    playAgain();
+    
 
+}
+
+function playAgain(){
     const playAgain= document.createElement("button");
     playAgain.setAttribute("id","play_again_button");
     playAgain.textContent="Play Again";
     buttons_container.append(playAgain);
     playAgain.addEventListener("click", ()=> window.location.reload());
-    
 
 }
 
